@@ -11,6 +11,7 @@ import {Checkbox} from './checkbox';
     template: `
 <StackLayout class='card'>
     <Button class="add-button" text='Add' (tap)='addNew($event)'></Button>
+    <Button class="add-button" text='Add me too' (tap)='addNew($event)'></Button>
     <StackLayout orientation='vertical'>
         <StackLayout
             *ngFor="let todo of todoStore.todos"
@@ -58,6 +59,7 @@ export class MainPage {
         this.todoStore = new TodoStore();
         this.todoStore.add("item 1", true);
         this.todoStore.add("item 2", false);
+        alert('foo-bar');
     }
 
     addNew(eventData) {
