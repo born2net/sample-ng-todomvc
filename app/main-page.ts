@@ -5,6 +5,8 @@ import {Inject, Component} from '@angular/core';
 import {TodoStore, Todo} from './services/store';
 import {Checkbox} from './checkbox';
 
+
+
 @Component({
     selector: 'main',
     providers: [TodoStore],
