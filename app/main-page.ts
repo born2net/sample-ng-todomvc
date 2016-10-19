@@ -6,7 +6,6 @@ import {TodoStore, Todo} from './services/store';
 import {Checkbox} from './checkbox';
 
 
-
 @Component({
     selector: 'main',
     providers: [TodoStore],
@@ -60,12 +59,14 @@ export class MainPage {
     constructor() {
         this.todoStore = new TodoStore();
         this.todoStore.add("item 1", true);
-        this.todoStore.add("item 2", false);
-        alert('foo-bar');
+        this.todoStore.add("item 2", false);        
+        alert('foo-bar11');
     }
 
     addNew(eventData) {
         this.todoStore.add("new task", false);
+        console.log('adding new task');
+        alert('adding new task');
     }
 
     toggleSelected(todo: Todo) {
